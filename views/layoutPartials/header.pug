@@ -31,7 +31,7 @@ style.
     width: 80%;
   }
 
-  .faRandom {
+  .diceIconI {
     color:#b9b9b9;
     cursor:pointer;
     font-size:32px;
@@ -349,9 +349,8 @@ style.
 
     div.searchPlaceHolder
       a(href="#")
-        // TODO why do we need these sequences of identifiers?
-        i.fas.faSearch.searchExpander.searchExpanderButton
-        i.fas.faArrowLeft.searchExpander.backButtonIcon
+        i.fas.fa-search.searchExpander.searchExpanderButton
+        i.fas.fa-arrow-left.searchExpander.backButtonIcon
 
     div.searchBar
       input(type="hidden", name="_csrf", value=_csrf)
@@ -363,13 +362,11 @@ style.
           value="")
 
       button.searchUploadsButton.searchButton
-        // TODO why do we need this sequence of identifiers?
-        i.fas.faSearch.searchIcon
+        i.fas.fa-search.searchIcon
 
     if !user
       a.diceIcon.signInAnchor(href="/random")
-        // TODO why do we need this sequence of identifiers?
-        i.fas.faRandom(aria-hidden="true")
+        i.fas.fa-random.diceIconI(aria-hidden="true")
 
       a.signInAnchor(href="/login")
         div.signInDiv
@@ -377,9 +374,7 @@ style.
 
     if user
       a.diceIcon.signInAnchor.withUser(href="/random")
-
-        // TODO why do we need this sequence of identifiers?
-        i.fas.faRandom(aria-hidden="true")
+        i.fas.fa-random.diceIconI(aria-hidden="true")
 
       a.uploadButton(href="/upload")
         div.postButton(data-target="#exampleModal", data-toggle="modal")
